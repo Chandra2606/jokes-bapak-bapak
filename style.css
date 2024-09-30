@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   margin: 0;
   padding: 20px;
@@ -26,7 +26,8 @@ body {
   padding: 50px 20px;
   text-align: center;
   max-width: 100%;
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
 }
 
 h3 {
@@ -36,12 +37,13 @@ h3 {
   letter-spacing: 1px;
 }
 
-.joke {
+.joke, .jawaban {
   font-size: 24px;
   color: #333;
   letter-spacing: 0.5px;
   line-height: 1.5;
   margin: 20px auto;
+  max-width: 90%;
   max-width: 600px;
 }
 
@@ -57,24 +59,84 @@ h3 {
   transition: transform 0.3s, background-color 0.3s;
 }
 
+.btnjabawan {
+  background-color: rgba(159, 104, 224, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  padding: 12px 36px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .btn:hover {
+  background-color: rgba(159, 104, 224, 1);
+}
+.btnjabawan:hover {
   background-color: rgba(159, 104, 224, 1);
 }
 
 .btn:active {
   transform: scale(0.95);
 }
+.btnjabawan:active {
+  transform: scale(0.95);
+}
 
 .btn:focus {
+  outline: none;
+}
+.btnjabawan:focus {
   outline: none;
 }
 
 .jawaban {
   display: none;
-  font-size: 24px;
-  color: #333;
-  letter-spacing: 0.5px;
-  line-height: 1.5;
-  margin: 20px auto;
-  max-width: 600px;
+}
+
+.button {
+ 
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .joke, .jawaban {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 10px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .joke, .jawaban {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+ 
+  .button {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: column;
+
+  }
 }
