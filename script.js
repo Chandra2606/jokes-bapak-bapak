@@ -27,6 +27,7 @@ const generateJoke = () => {
   const randomIndex = Math.floor(Math.random() * jokesArray.length);
   jokeEl.innerHTML = jokesArray[randomIndex];
   jawabanEl.style.display = "none";
+  sound.pause();
 };
 
 const generateJawaban = () => {
